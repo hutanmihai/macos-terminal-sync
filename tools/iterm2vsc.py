@@ -59,6 +59,8 @@ with open(PATH_VSCODE_SETTINGS, 'r') as json_file:
 for key in vsc_theme:
         vsc_settings['workbench.colorCustomizations'][key] = vsc_theme[key]
 
+vsc_settings['terminal.integrated.fontFamily'] = 'MesloLGS NF'
+
 # Write the new settings.json file to the path specified in VSC_SETTINGS_PATH
 with open(PATH_VSCODE_SETTINGS, 'w') as json_file:
     json.dump(vsc_settings, json_file, indent=4)

@@ -73,8 +73,10 @@ class ThemeConvertor {
             "rowCount": 50,
         ]
      
-     //TODO HERE YOU CAN CHANGE THE FONT FAMILY
-      if let font = archivedFont(withName: "MesloLGS NF", size: 16) {
+     //TODO HERE YOU CAN CHANGE THE FONT FAMILY  !!!!!!!!!!!!
+      let FONT = "MesloLGS NF"
+
+      if let font = archivedFont(withName: FONT, size: 16) {
             terminalScheme["Font"] = font
         }
         

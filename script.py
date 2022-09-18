@@ -67,7 +67,7 @@ if USE_VSCODE == 'y':
 
     print('In my opinion, the background color is not always fitting well, do you want me to change it to the basic one from vscode? (y/n)')
 
-    CHANGE_BACKGROUND = input().strip()
+    CHANGE_BACKGROUND = input().strip().lower()
 
     if CHANGE_BACKGROUND == 'y':
         change_background()

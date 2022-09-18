@@ -14,6 +14,9 @@ TIP: Some default macOS themes are not included here (default themes like
 
 ## Prerequisites
 
+PERSONAL OPINION:
+- I would suggest you follow this guide https://medium.com/seokjunhong/customize-the-terminal-zsh-iterm2-powerlevel10k-complete-guide-for-beginners-35c4ba439055 as it shows in a easy way how to install oh-my-zsh, iTerm2 and powerlevel10k properly.
+
 In the code files of this project I set up the custom font family as `MesloLGS NF`, so you need to install it, or change the code with one that you already have installed.
 
 TIP: `MesloLGS NF` is a font that supports icons.

@@ -1,7 +1,7 @@
 import sys
-import json
-import math
-import xmltodict
+from json import load as loadjson, dump as dumpjson
+from math import floor
+from xmltodict import parse as xmltodict
 
 PATH_VSCODE_SETTINGS = sys.argv[2].strip()
 PATH_ITERMCOLORS = sys.argv[1].strip()
@@ -30,8 +30,8 @@ MAP = {
   'terminal.selectionBackground':'Selection Color'
 }
 
-iterm_theme_values_list = xmltodict.parse(open(PATH_ITERMCOLORS, 'r').read())['plist']['dict']['dict']
-iterm_theme_keys_list = xmltodict.parse(open(PATH_ITERMCOLORS, 'r').read())['plist']['dict']['key']
+iterm_theme_values_list = xmltodict(open(PATH_ITERMCOLORS, 'r').read())['plist']['dict']['dict']
+iterm_theme_keys_list = xmltodict(open(PATH_ITERMCOLORS, 'r').read())['plist']['dict']['key']
 
 vsc_theme = {}
  
@@ -40,10 +40,13 @@ IDK = {}
 counter = 0
 
 for dict in iterm_theme_values_list:
-    b, g, r = dict['real']
-    blue  = math.floor(float(b) * 255)
-    green = math.floor(float(g) * 255)
-    red   = math.floor(float(r) * 255)
+    if len(dict['real']) == 3:
+        b, g, r = dict['real']
+    else:
+        a, b, g, r = dict['real']
+    blue  = floor(float(b) * 255)
+    green = floor(float(g) * 255)
+    red   = floor(float(r) * 255)
     IDK[iterm_theme_keys_list[counter]] = '#%02x%02x%02x' % (red, green, blue)
     counter += 1
 
@@ -53,7 +56,7 @@ for key in MAP:
 
 # Read the settings.json file and save it to vsc_settings dictionary
 with open(PATH_VSCODE_SETTINGS, 'r') as json_file:
-    vsc_settings = json.load(json_file)
+    vsc_settings = loadjson(json_file)
 
 # Replace the colors in the settings.json file with the converted values
 for key in vsc_theme:
@@ -63,4 +66,4 @@ vsc_settings['terminal.integrated.fontFamily'] = 'MesloLGS NF'
 
 # Write the new settings.json file to the path specified in VSC_SETTINGS_PATH
 with open(PATH_VSCODE_SETTINGS, 'w') as json_file:
-    json.dump(vsc_settings, json_file, indent=4)
+    dumpjson(vsc_settings, json_file, indent=4)

@@ -59,6 +59,7 @@ This repo contains a tool to convert any iTerm2 color theme into macOS
 Terminal theme. To run just execute script:
 
 ```sh
+$ pipenv shell
 $ python3 script.py
 ```
 

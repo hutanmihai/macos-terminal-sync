@@ -1,10 +1,9 @@
-# macos-terminal-themes
-
 # Syncing color themes between iTerm2, macOS Terminal.app and VSCode Terminal
 
 This is a script that is syncing the color themes between these 3.
-In this repository you can already find a bunch of color themes initially ported from
-[iTerm2 color schemes, collected by @mbadolato][1]. Screenshots are demonstrated below and
+In this repository you can already find a bunch of color themes ported from
+[iTerm2 color schemes, collected by @mbadolato][1]. 
+Screenshots are demonstrated below and
 in the `screenshots/` directory of this repo.
 
 [1]: https://github.com/mbadolato/iTerm2-Color-Schemes
@@ -14,6 +13,10 @@ TIP: Some default macOS themes are not included here (default themes like
 
 
 ## Prerequisites
+
+In the code files of this project I set up the custom font family as `MesloLGS NF`, so you need to install it, or change the code with one that you already have installed.
+
+TIP: `MesloLGS NF` is a font that supports icons.
 
 Since terminal themes are just color schemes, you need to enable color formatting for your shell first - see [this comment][2] for more details
 
@@ -26,10 +29,14 @@ Since terminal themes are just color schemes, you need to enable color formattin
 
 - Choose your favourite colorscheme from `itermcolorschemes/` folder
 
+TIP: If you don't have iTerm2 you can skip the next 2 steps.
+
 - You can check them either by importing them in iterm2 as follows:
-        - Open Iterm2
+        - Open iTerm2
         - Upper left corner click on iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets -> Import
         - After you selected Import you can import themes from the `itermcolorschemes/` folder
+
+- After finding and setting up your favourite theme for iTerm2 it's time to run the script.
 
 
 ## Tools

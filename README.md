@@ -14,6 +14,11 @@ TIP: Some default macOS themes are not included here (default themes like
 
 ## Prerequisites
 
+You need to install pipenv using this command:
+```sh
+$ pip3 install pipenv
+```
+
 PERSONAL OPINION:
 - I would suggest you follow this guide https://medium.com/seokjunhong/customize-the-terminal-zsh-iterm2-powerlevel10k-complete-guide-for-beginners-35c4ba439055 as it shows in a easy way how to install oh-my-zsh, iTerm2 and powerlevel10k properly.
 

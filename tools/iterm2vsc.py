@@ -5,6 +5,7 @@ from xmltodict import parse as xmltodict
 
 PATH_VSCODE_SETTINGS = sys.argv[2].strip()
 PATH_ITERMCOLORS = sys.argv[1].strip()
+FONT = 'MesloLGS NF'
 
 MAP = {
   'terminal.background': 'Background Color',
@@ -62,7 +63,7 @@ with open(PATH_VSCODE_SETTINGS, 'r') as json_file:
 for key in vsc_theme:
         vsc_settings['workbench.colorCustomizations'][key] = vsc_theme[key]
 
-vsc_settings['terminal.integrated.fontFamily'] = 'MesloLGS NF'
+vsc_settings['terminal.integrated.fontFamily'] = FONT
 
 # Write the new settings.json file to the path specified in VSC_SETTINGS_PATH
 with open(PATH_VSCODE_SETTINGS, 'w') as json_file:

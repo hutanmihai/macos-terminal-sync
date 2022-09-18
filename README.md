@@ -18,6 +18,10 @@ In the code files of this project I set up the custom font family as `MesloLGS N
 
 TIP: `MesloLGS NF` is a font that supports icons.
 
+You can Download the font here https://github.com/romkatv/dotfiles-public/blob/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf.
+
+TIP: Don't forget to also install it.
+
 Since terminal themes are just color schemes, you need to enable color formatting for your shell first - see [this comment][2] for more details
 
 [2]: https://github.com/lysyi3m/macos-terminal-themes/issues/1#issuecomment-148635036
@@ -32,9 +36,9 @@ Since terminal themes are just color schemes, you need to enable color formattin
 TIP: If you don't have iTerm2 you can skip the next 2 steps.
 
 - You can check them either by importing them in iterm2 as follows:
-        - Open iTerm2
-        - Upper left corner click on iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets -> Import
-        - After you selected Import you can import themes from the `itermcolorschemes/` folder
+        -> Open iTerm2
+        -> Upper left corner click on iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets -> Import
+        -> After you selected Import you can import themes from the `itermcolorschemes/` folder
 
 - After finding and setting up your favourite theme for iTerm2 it's time to run the script.
 

@@ -1,14 +1,15 @@
 # macos-terminal-themes
 
-# Color themes for default macOS Terminal.app
+# Syncing color themes between iTerm2, macOS Terminal.app and VSCode Terminal
 
-This is a set of color themes for default macOS Terminal.app (initially ported from
-[iTerm2 color schemes, collected by @mbadolato][1]). Screenshots are demonstrated below and
+This is a script that is syncing the color themes between these 3.
+In this repository you can already find a bunch of color themes initially ported from
+[iTerm2 color schemes, collected by @mbadolato][1]. Screenshots are demonstrated below and
 in the `screenshots/` directory of this repo.
 
 [1]: https://github.com/mbadolato/iTerm2-Color-Schemes
 
-_Note_: Some default macOS themes are not included here (default themes like
+TIP: Some default macOS themes are not included here (default themes like
 "Pro", "Basic", "Grass", etc.), because you already have them :)
 
 
@@ -21,14 +22,14 @@ Since terminal themes are just color schemes, you need to enable color formattin
 
 ## Installation Instructions
 
-- Clone or download this repo
+- Clone this repo
 
-- Go to `themes/` folder
+- Choose your favourite colorscheme from `itermcolorschemes/` folder
 
-- Double click on `*.terminal` file. It will open a new Terminal window with selected
-  color theme.
-
-- Set the theme as the default one with `Shell -> Use Settings as Default`
+- You can check them either by importing them in iterm2 as follows:
+        - Open Iterm2
+        - Upper left corner click on iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets -> Import
+        - After you selected Import you can import themes from the `itermcolorschemes/` folder
 
 
 ## Tools
@@ -39,28 +40,8 @@ This repo contains a tool to convert any iTerm2 color theme into macOS
 Terminal theme. To run just execute script:
 
 ```sh
-$ ./tools/iterm2terminal.swift /path/to/my/awesome-theme.itermcolors
+$ python3 script.py
 ```
-
-
-### Generate Theme Preview
-
-If you have an awesome theme and want to publish it, please generate a
-preview image using the following steps:
-
-1. Load the theme in a terminal.
-2. Run
-   ```sh
-   $ bash tools/preview.sh
-   ```
-3. Set the font size to 14.
-4. Take a screenshot and put it in the `screenshots/` folder.
-5. Update the `README.md` to include your new theme screenshot.
-
-_Note_: preview will be generated using [ANSI Escape Sequences][3]
-
-[3]: http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
-
 
 ## Screenshots
 

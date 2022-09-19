@@ -69,3 +69,4 @@ vsc_settings['terminal.integrated.fontFamily'] = FONT
 # Write the new settings.json file to the path specified in VSC_SETTINGS_PATH
 with open(PATH_VSCODE_SETTINGS, 'w') as json_file:
     dumpjson(vsc_settings, json_file, indent=4)
+    

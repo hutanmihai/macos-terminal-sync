@@ -3,7 +3,7 @@ from json import load as loadjson, dump as dumpjson
 from math import floor
 from xmltodict import parse as xmltodict
 
-# constants
+# constants...
 PATH_VSCODE_SETTINGS = sys.argv[2].strip()
 PATH_ITERMCOLORS = sys.argv[1].strip()
 FONT = 'MesloLGS NF'
